@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Extractor</title>
+</head>
+<body>
+    <h1>Upload files to extract text</h1>
+    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" multiple>
+        <input type="submit" value="Upload">
+    </form>
+    {% if structured_data %}
+        {% for data in structured_data %}
+            <h1>Structured Data</h1>
+            {% for item in data %}
+                <pre>{{ item }}</pre>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
