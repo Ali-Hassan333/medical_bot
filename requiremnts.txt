@@ -1,0 +1,7 @@
+Flask
+Werkzeug
+Pillow
+pytesseract
+pdfplumber
+openai
+gunicorn
